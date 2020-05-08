@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tutorials_test/screens/articleLearnScreen.dart';
+import 'screens/LearnMoreActualPage.dart';
 import 'widgets.dart';
-import 'models/learnMoreArticles.dart';
+import 'models/learnMoreArticlesClasses.dart';
 
 class LearnMorePage extends StatefulWidget {
   @override
@@ -14,7 +14,7 @@ class _LearnMorePageState extends State<LearnMorePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: Container(),
+          leading: Container(),   
           title: Text("Learn More"),
           centerTitle: true,
         ),
