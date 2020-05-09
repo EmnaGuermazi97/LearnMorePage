@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tutorials_test/Authentication/ActionDetection.dart';
+import 'package:tutorials_test/ISIPage.dart';
 import 'package:tutorials_test/LearnMorePageFront.dart';
 
 import 'package:tutorials_test/screens/LearnMoreActualPage.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
           '/signupPage' : (context) => SignUpPage(),
           '/learnMorePage' : (context) => LearnMorePage(),
           '/loginPageE' : (context) => LoginPageE(),
+          '/ISIPage': (context) => ISIPage(),
         });
   }
 }

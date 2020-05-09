@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold( 
-        /*  appBar: new AppBar(
+       /*   appBar: new AppBar(
           title: new Text('Home'),
           centerTitle: true,
        
@@ -48,7 +48,8 @@ class _HomePageState extends State<HomePage> {
                   navigationButton(context, 'Help Me Sleep',
                       img: 'assets/images/help.png'),
                   navigationButton(context, 'Insomnia Sleep Index',
-                      img: 'assets/images/isi.png'),
+                      img: 'assets/images/isi.png',routeName:'/ISIPage' ),
+                     
                 ]),
           ),
         ),

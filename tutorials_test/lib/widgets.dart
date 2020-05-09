@@ -211,7 +211,7 @@ Widget navigationButton(BuildContext context, String title,
     {String img, String routeName}) {
   return Container(
     decoration: BoxDecoration(borderRadius: BorderRadius.circular(15.0)),
-    width: MediaQuery.of(context).size.width * 0.8,
+    width: MediaQuery.of(context).size.width * 0.9,//it was *0.8 i don't mind wat it is ,juste 7abit na7i el erreur for now
     height: MediaQuery.of(context).size.height / 12,
     child: RaisedButton(
         elevation: 7.0,
@@ -254,7 +254,7 @@ Widget articleStructure({String title, String paragraphe}) {
                         // has the effect of softening the shadow
                         spreadRadius:
                             4.0, // has the effect of extending the shadow
-                      ),], 
+                      ),],
             borderRadius: BorderRadius.circular(40.0), color: Colors.white),
         child: Column(
           children: <Widget>[
@@ -281,5 +281,15 @@ Widget articleStructure({String title, String paragraphe}) {
             ),
           ],
         ),
+      ));
+}
+Widget carouselItem(BuildContext context, Widget question) {
+  return Container(
+      width: MediaQuery.of(context).size.width,
+      margin: EdgeInsets.symmetric(horizontal: 5.0),
+      decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(15.0)),
+      child: Center(
+        child: question,
       ));
 }

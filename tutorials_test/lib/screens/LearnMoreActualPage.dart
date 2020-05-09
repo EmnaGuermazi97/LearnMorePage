@@ -18,78 +18,85 @@ class _ArticleLearnScreenState extends State<ArticleLearnScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
-                  child: Column(
-            mainAxisSize: MainAxisSize.min,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Column(
             children: <Widget>[
-               Column(
-           children: <Widget>[
-           Padding(
-          padding: const EdgeInsets.only(
-              right: 20.0, top: 40.0, left: 20.0, bottom: 00.0),
-          child: Container(
-              height: 450.0,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                //add blue shadow
-                 boxShadow: [
-                 BoxShadow(
-                        color: Colors.lightBlue[50],
-                        // has the effect of softening the shadow
-                        spreadRadius:
-                            4.0, // has the effect of extending the shadow
-                      ),],
-                borderRadius: BorderRadius.circular(40.0),
-                
-             
-              ),
-              child: Column(
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(top: 60.0, left: 20.0,bottom: 0.0),
-                    child: Container(
-                      height: 120.0,
+              Padding(
+                padding: const EdgeInsets.only(
+                    right: 20.0, top: 40.0, left: 20.0, bottom: 00.0),
+                child: Container(
+                    height: 450.0,
+                    decoration: BoxDecoration(
                       color: Colors.white,
-                      child: Text(
-                        widget.article.titleA,
-                        style: TextStyle(
-                          fontSize: 35.0,
-                          fontWeight: FontWeight.w600,
-                          letterSpacing: 1.2,
+                      //add blue shadow
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.lightBlue[50],
+                          // has the effect of softening the shadow
+                          spreadRadius:
+                              4.0, // has the effect of extending the shadow
                         ),
-                      ),
+                      ],
+                      borderRadius: BorderRadius.circular(40.0),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        top: 40.0, right: 2.0, left: 2.0),
-                    child: Image(
-                        image: AssetImage(widget.article.imageUrlA),
+                    child: Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 60.0, left: 20.0, bottom: 0.0),
+                          child: Container(
+                            height: 120.0,
+                            color: Colors.white,
+                            child: Text(
+                              widget.article.titleA,
+                              style: TextStyle(
+                                fontSize: 35.0,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 1.2,
+                              ),
+                            ),
+                          ),
                         ),
-                  ),
-                ],
-              )),
-           ),
-           ],
-            ),
-            Column(children: widget.article.miniTitles.map((f)=>
-                   articleStructure(
-                      title: widget.article.miniTitles[widget.article.miniTitles.indexOf(f)],
-                     paragraphe: widget.article.paragraphes[widget.article.miniTitles.indexOf(f)])
-            ).toList(),),
-              // Expanded(
-              //                  child: ListView.builder(
-              //                    shrinkWrap: true,
-              //   scrollDirection: Axis.vertical,
-              //   itemCount: widget.article.miniTitles.length,
-              //   itemBuilder: (BuildContext context, int index) {
-              //     //articleStructure is a widget made  by me,it takes as parameter a title and  a paragraph
-              //     return articleStructure(
-              //         title: widget.article.miniTitles[index],
-              //         paragraphe: widget.article.paragraphes[index]);
-              //   }),
-              // ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 40.0, right: 2.0, left: 2.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20.0),
+                            child: Image(
+                              image: AssetImage(widget.article.imageUrlA),
+                            ),
+                          ),
+                        ),
+                      ],
+                    )),
+              ),
             ],
           ),
-        ));
+          Column(
+            children: widget.article.miniTitles
+                .map((f) => articleStructure(
+                    title: widget.article
+                        .miniTitles[widget.article.miniTitles.indexOf(f)],
+                    paragraphe: widget.article
+                        .paragraphes[widget.article.miniTitles.indexOf(f)]))
+                .toList(),
+          ),
+          // Expanded(
+          //                  child: ListView.builder(
+          //                    shrinkWrap: true,
+          //   scrollDirection: Axis.vertical,
+          //   itemCount: widget.article.miniTitles.length,
+          //   itemBuilder: (BuildContext context, int index) {
+          //     //articleStructure is a widget made  by me,it takes as parameter a title and  a paragraph
+          //     return articleStructure(
+          //         title: widget.article.miniTitles[index],
+          //         paragraphe: widget.article.paragraphes[index]);
+          //   }),
+          // ),
+        ],
+      ),
+    ));
   }
 }

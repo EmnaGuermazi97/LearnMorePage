@@ -156,7 +156,12 @@ Widget showLogo() {
         child: CircleAvatar(
           backgroundColor: Colors.transparent,
           radius: 48.0,
-          child: Image.asset('assets/images/moon1.jpg'),
+          child:
+          
+           ClipRRect(
+             borderRadius: BorderRadius.circular(80.0),
+             child: Image.asset('assets/images/moon1.jpg')),
+         
         ),
       ),
     );
