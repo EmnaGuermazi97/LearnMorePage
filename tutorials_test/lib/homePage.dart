@@ -46,7 +46,8 @@ class _HomePageState extends State<HomePage> {
                       img: 'assets/images/learn.png',
                       routeName: '/learnMorePage'),
                   navigationButton(context, 'Help Me Sleep',
-                      img: 'assets/images/help.png'),
+                      img: 'assets/images/help.png',
+                      routeName: '/help_me_sleep'),
                   navigationButton(context, 'Insomnia Sleep Index',
                       img: 'assets/images/isi.png',routeName:'/ISIPage' ),
                      
