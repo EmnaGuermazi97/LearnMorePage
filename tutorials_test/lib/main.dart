@@ -5,6 +5,7 @@ import 'package:tutorials_test/LearnMorePageFront.dart';
 
 import 'package:tutorials_test/screens/LearnMoreActualPage.dart';
 
+import 'help_me_sleep.dart';
 import 'loginSignUpPageEm.dart';
 import 'mainFacebook.dart';
 import 'services/authentication.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
           '/learnMorePage' : (context) => LearnMorePage(),
           '/loginPageE' : (context) => LoginPageE(),
           '/ISIPage': (context) => ISIPage(),
+          '/help_me_sleep': (context) => HelpMeSleep(), 
         });
   }
 }

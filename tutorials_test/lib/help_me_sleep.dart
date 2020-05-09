@@ -7,9 +7,9 @@ import 'package:flutter/widgets.dart';
 
 import 'widgets.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(HelpMeSleep());
 
-class MyApp extends StatelessWidget {
+class HelpMeSleep extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
